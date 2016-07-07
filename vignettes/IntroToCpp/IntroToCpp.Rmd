@@ -1,0 +1,48 @@
+---
+title:  Introduction To C++
+author: Peter von Rohr
+date: 2016-07-07
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, results = 'asis')
+```
+
+```{r DocumentStatus, eval=TRUE}
+r6obj_docstat <- rmddochelper::R6ClassDocuStatus$new()
+r6obj_docstat$setProject(psProject = "IntroToCpp")
+r6obj_docstat$setVersion(psVersion = "0.0.901")
+r6obj_docstat$setStatus(psStatus = "Initialisation")
+r6obj_docstat$include_doc_stat(psTitle = "## Document Status")
+```
+
+
+```{r TableAbbreviation}
+r6ob_abbrtable <- rmddochelper::R6ClassTableAbbrev$new()
+### # include table of abbreviations only, if there are any
+if (!r6ob_abbrtable$is_empty_abbr())
+  r6ob_abbrtable$include_abbr_table(psAbbrTitle = "## Abbreviations")
+```
+
+## Disclaimer
+This document gives a basic introduction to C++ for beginners withough prior knowledge.
+
+
+## Introduction
+Because C++ is a superset or an extension of the C language, beginners without any prior knowledge of the C language first have to get familiar with the C language. This is not a problem, because in most cases the differences between C and C++ are irrelevant when learning that language. As a consequence of that, if we are talking about and teaching programming in C++, many of the concepts and constructs are also available in C. For what follows, we are sticking to the name C++ for the language although, what we are meaning really is C and C++. 
+
+C++ is widely used in very different applications ranging from systems like the linux kernel to office applications like LibreOffice. Hence the language can be used for programming very closely to the operating system as well as for GUI-type of applications. 
+
+
+## References
+Many references are available, either as books or as material on the web. 
+
+
+## First example
+
+```{r WriteTableOfAbbreviations, results='hide'}
+r6ob_abbrtable$writeToTsvFile()
+```
+<!-- END of document                 -- 
+  -- Below this must not be anything --> 
